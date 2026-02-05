@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SteelWorks Industrial Design System */
+
+@layer base {
+  :root {
+    /* Navy blue industrial color palette */
+    --background: 0 0% 100%;
+    --foreground: 213 39% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 213 39% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 213 39% 18%;
+
+    /* Deep navy blue primary */
+    --primary: 213 50% 23%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Light gray secondary */
+    --secondary: 0 0% 90%;
+    --secondary-foreground: 213 39% 18%;
+
+    /* Muted grays */
+    --muted: 220 14% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Accent - slightly lighter navy */
+    --accent: 213 45% 30%;
+    /* --accent: 360 92% 33%; */
+    
+     /* --accent: 240 68% 45%; */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 213 50% 23%;
+
+    --radius: 0.25rem;
+
+    /* Custom tokens */
+    --steel-dark: 213 39% 18%;
+    --steel-navy: 213 50% 23%;
+    --steel-blue: 213 45% 30%;
+    --steel-gray: 215 16% 47%;
+    --steel-light: 220 14% 96%;
+    --steel-muted: 220 20% 97%;
+    
+    /* Typography */
+    --font-heading: 'Ubuntu', serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Shadows */
+    --shadow-card: 0 2px 8px hsl(213 39% 18% / 0.08);
+    --shadow-card-hover: 0 4px 16px hsl(213 39% 18% / 0.12);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-4 py-16 md:px-8 md:py-20 lg:px-16 lg:py-24;
+  }
+
+  .container-narrow {
+    @apply max-w-7xl mx-auto;
+  }
+}
