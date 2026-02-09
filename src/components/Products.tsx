@@ -41,15 +41,6 @@ const products = [
   },
 ];
 
-const subject = "Request for Pricing Information";
-const body = `Hello,
-
-I would like to request pricing information for 
-
-Thank you.
-
-Ibrahim Olayiwola`;
-
 
 
 
