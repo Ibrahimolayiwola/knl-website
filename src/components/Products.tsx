@@ -7,6 +7,8 @@ import SteelProduct4 from "../assets/product4.jpg"
 import SteelProduct5 from "../assets/product5.jpg"
 import SteelProduct6 from "../assets/product6.jpg"
 import { useStateContext } from "../context/StateContext";
+import {motion} from "framer-motion"
+import {cardImage, heading, subText, viewport} from "../animation/animation"
 
 const products = [
   {
@@ -52,12 +54,12 @@ const Products = () => {
     <section id="products" className="section-padding bg-muted">
       <div className="container-narrow mx-auto">
         <div className="text-center mb-12">
-          <h2 className="font-heading text-2xl md:text-3xl font-semibold text-destructive mb-3">
+          <motion.h2 variants={heading} initial="initial" whileInView="inView" viewport={viewport} className="font-heading text-2xl md:text-3xl font-semibold text-destructive mb-3">
             Our Premium Steel Products
-          </h2>
-          <p className="text-muted-foreground text-sm md:text-base max-w-lg mx-auto">
+          </motion.h2>
+          <motion.p variants={subText} initial="initial" whileInView="inView" viewport={viewport} className="text-muted-foreground text-sm md:text-base max-w-lg mx-auto">
             Explore our diverse range of steel products, engineered for strength, durability, and reliability.
-          </p>
+          </motion.p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -67,7 +69,11 @@ const Products = () => {
               className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-card-hover transition-shadow duration-300"
             >
               <div className="aspect-[4/3] overflow-hidden">
-                <img
+                <motion.img
+                  variants={cardImage}
+                  initial="initial"
+                  whileInView="inView"
+                  viewport={viewport}
                   src={image}
                   alt={name}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"

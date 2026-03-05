@@ -3,7 +3,7 @@ import { CiSearch } from "react-icons/ci";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Input } from "../components/ui/input";
-import { Button } from "../components/ui/button";
+import { Button, MotionButton } from "../components/ui/button";
 import { Checkbox } from "../components/ui/checkbox";
 
 import productRebar from "../assets/product1.jpg";
@@ -14,6 +14,8 @@ import productWire from "../assets/product5.jpg";
 import productCoils from "../assets/product5.jpg";
 import RequestPrice from "../components/RequestPrice";
 import { useStateContext } from "../context/StateContext";
+import { motion } from "framer-motion"
+import { button, cardImage, heading, sidebar, subText, viewport } from "../animation/animation"
 
 const sizes = [
   "16mm",
@@ -88,7 +90,7 @@ const products = [
 
 
 const Products = () => {
-  const {onRequestPrice, selectedProduct} = useStateContext()
+  const { onRequestPrice, selectedProduct } = useStateContext()
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
   const [selectedMaterials, setSelectedMaterials] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
@@ -102,7 +104,7 @@ const Products = () => {
   };
 
 
-  
+
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -110,9 +112,19 @@ const Products = () => {
 
       <main className="flex-1">
         <div className="container-narrow mx-auto section-padding">
-          <div className="flex flex-col lg:flex-row gap-8">
+          <div className="lg:hidden">
+             <motion.h2 variants={heading} initial="initial" whileInView="inView" viewport={viewport} className="font-heading text-2xl md:text-3xl font-bold text-destructive text-center mb-12">
+                Our Products
+              </motion.h2>
+              <motion.p variants={subText} initial="initial" whileInView="inView" viewport={viewport} className="text-foreground mb-6 leading-relaxed">
+                Explore our extensive range of high-quality steel products, engineered to meet the
+                demands of diverse industrial and construction projects. From raw materials to custom
+                fabrications, we deliver reliability and performance.
+              </motion.p>
+          </div>
+          <div className="flex flex-col lg:flex-row gap-8 pt-8">
             {/* Sidebar */}
-            <aside className="w-full lg:w-64 shrink-0">
+            <motion.aside variants={sidebar} initial="initial" whileInView="inView" viewport={viewport} className="w-full lg:w-64 shrink-0">
               <div className="bg-card border border-border rounded-lg p-6">
                 {/* Categories */}
                 <nav className="space-y-1 mb-8">
@@ -121,8 +133,8 @@ const Products = () => {
                       key={size}
                       onClick={() => setSelectedSize(selectedSize === size ? null : size)}
                       className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${selectedSize === size
-                          ? "bg-primary/10 text-primary font-medium"
-                          : "text-foreground hover:bg-muted"
+                        ? "bg-primary/10 text-primary font-medium"
+                        : "text-foreground hover:bg-muted"
                         }`}
                     >
                       {size}
@@ -151,21 +163,30 @@ const Products = () => {
                   ))}
                 </div>
               </div>
-            </aside>
+            </motion.aside>
 
             {/* Main Content */}
             <div className="flex-1">
               {/* Intro Text */}
-              <p className="text-foreground mb-6 leading-relaxed">
+              <div className="max-lg:hidden">
+                <motion.h2 variants={heading} initial="initial" whileInView="inView" viewport={viewport} className="font-heading text-2xl md:text-3xl font-bold text-destructive text-center mb-12">
+                Our Products
+              </motion.h2>
+              <motion.p variants={subText} initial="initial" whileInView="inView" viewport={viewport} className="text-foreground mb-6 leading-relaxed">
                 Explore our extensive range of high-quality steel products, engineered to meet the
                 demands of diverse industrial and construction projects. From raw materials to custom
                 fabrications, we deliver reliability and performance.
-              </p>
+              </motion.p>
+              </div>
 
               {/* Search Bar */}
               <div className="relative mb-8">
                 <CiSearch className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                 <Input
+                  variants={button}
+                  initial="initial"
+                  whileInView="inView"
+                  viewport={viewport}
                   type="text"
                   placeholder="Search for products, materials, or applications..."
                   value={searchQuery}
@@ -176,13 +197,17 @@ const Products = () => {
 
               {/* Product Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 mb-8">
-                {products.map(({id, image, name, tags}) => (
+                {products.map(({ id, image, name, tags }) => (
                   <div
                     key={id}
                     className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-card-hover transition-shadow duration-300"
                   >
                     <div className="aspect-[4/3] overflow-hidden">
-                      <img
+                      <motion.img
+                        variants={cardImage}
+                        initial="initial"
+                        whileInView="inView"
+                        viewport={viewport}
                         src={image}
                         alt="Steel product"
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
@@ -202,7 +227,7 @@ const Products = () => {
                           </span>
                         ))}
                       </div>
-                      <Button variant="outline" size="sm" className="w-full" onClick={() => onRequestPrice({productName: name, image})}>
+                      <Button variant="outline" size="sm" className="w-full" onClick={() => onRequestPrice({ productName: name, image })}>
                         Request price
                       </Button>
                     </div>
@@ -212,9 +237,9 @@ const Products = () => {
 
               {/* Load More Button */}
               <div className="text-center">
-                <Button variant="outline" size="lg">
+                <MotionButton variants={button} initial="initial" whileInView="inView" viewport={viewport} variant="outline" size="lg">
                   Load More Products
-                </Button>
+                </MotionButton>
               </div>
             </div>
           </div>

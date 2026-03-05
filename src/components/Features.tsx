@@ -2,6 +2,8 @@ import { BsTruckFlatbed } from "react-icons/bs";
 import { GoShieldCheck } from "react-icons/go";
 import { IoMdTrendingUp } from "react-icons/io";
 import { PiHandshakeLight } from "react-icons/pi";
+import {motion} from "framer-motion"
+import { card, heading, subText, viewport } from "../animation/animation";
 
 const features = [
   {
@@ -31,17 +33,21 @@ const Features = () => {
     <section id="about" className="section-padding bg-background">
       <div className="container-narrow mx-auto">
         <div className="text-center mb-12">
-          <h2 className="font-heading text-2xl md:text-3xl font-semibold text-destructive mb-3">
+          <motion.h2 variants={heading} initial="initial" whileInView="inView" viewport={viewport} className="font-heading text-2xl md:text-3xl font-semibold text-destructive mb-3">
             Why Choose KNL?
-          </h2>
-          <p className="text-muted-foreground text-sm md:text-base max-w-lg mx-auto">
+          </motion.h2>
+          <motion.p variants={subText} initial="initial" whileInView="inView" viewport={viewport} className="text-muted-foreground text-sm md:text-base max-w-lg mx-auto">
             We are committed to excellence, providing superior steel products and services that drive your projects forward.
-          </p>
+          </motion.p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
-            <div
+            <motion.div
+              variants={card}
+              initial="initial"
+              whileInView="inView"
+              viewport={viewport}
               key={feature.title}
               className="bg-card border border-border rounded-lg p-6 text-center hover:shadow-card-hover transition-shadow duration-300"
               style={{ animationDelay: `${index * 0.1}s` }}
@@ -55,7 +61,7 @@ const Features = () => {
               <p className="text-muted-foreground text-sm leading-relaxed">
                 {feature.description}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

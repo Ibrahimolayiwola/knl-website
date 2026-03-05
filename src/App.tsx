@@ -5,6 +5,7 @@ import Products from './pages/Products';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import { StateContext } from './context/StateContext';
+import ScrollToTop from './components/scrollToTop';
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
     <>
       <StateContext>
         <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             <Route element={<Home />} path="/"></Route>
             <Route element={<Products />} path='/products' />

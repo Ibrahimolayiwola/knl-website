@@ -4,6 +4,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "./ui/button";
 import Logo from "../assets/knl-logo-2.png"
+import { IoIosArrowForward } from "react-icons/io";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,7 +32,7 @@ const Header = () => {
               <Link
                 key={link.label}
                 to={link.href}
-                className={`text-sm font-medium transition-colors ${
+                className={`text-sm font-medium transition-colors pb-1 ${
                   location.pathname === link.href
                     ? "text-primary border-b border-b-primary"
                     : "text-foreground hover:border-b hover:border-b-primary"
@@ -65,13 +66,13 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-border">
-            <div className="flex flex-col gap-4">
+          <nav className="md:hidden py-16 border-t border-border min-h-screen bg-background">
+            <div className="flex flex-col gap-8 text-center">
               {navLinks.map((link) => (
                 <Link
                   key={link.label}
                   to={link.href}
-                  className={`text-sm font-medium transition-colors ${
+                  className={`text-xl font-medium transition-colors cursor-pointer flex gap-6 justify-center items-center ${
                     location.pathname === link.href
                       ? "text-primary"
                       : "text-foreground hover:text-primary"
@@ -79,6 +80,7 @@ const Header = () => {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}
+                  <IoIosArrowForward />
                 </Link>
               ))}
               

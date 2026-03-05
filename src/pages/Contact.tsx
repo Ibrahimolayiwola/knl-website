@@ -2,10 +2,12 @@ import { useState } from "react";
 import { MapPin, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { Button } from "../components/ui/button";
+import { MotionButton } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { Textarea } from "../components/ui/textarea";
 import { Label } from "../components/ui/label";
+import { motion } from "framer-motion"
+import { heading, subText, button, viewport } from "../animation/animation";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -25,6 +27,14 @@ const Contact = () => {
     phone,
     message
   } = formData
+
+   const inputs = [
+    {text: "First name", label: "firstName", type: "text", value: firstName},
+    {text: "Last name", label: "lastName", type: "text", value: lastName},
+    {text: "Company", label: "company", type: "text", value: company},
+    {text: "Work email", label: "email", type: "email", value: email},
+    {text: "Phone number", label: "phone", type: "tel", value: phone},
+  ]
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -55,6 +65,8 @@ company: ${company}
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+ 
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -65,78 +77,44 @@ company: ${company}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Contact Form */}
               <div className="bg-background border border-border rounded-lg p-8">
-                <h1 className="font-heading text-3xl font-bold text-destructive mb-2">
+                <motion.h1 variants={heading} initial="initial" whileInView="inView" viewport={viewport} className="font-heading text-3xl font-bold text-destructive mb-2">
                   Get in Touch
-                </h1>
-                <p className="text-muted-foreground mb-8">
+                </motion.h1>
+                <motion.p variants={subText} initial="initial" whileInView="inView" viewport={viewport} className="text-muted-foreground mb-8">
                   Have questions about our steel products or services? Fill out the form below, and our team will get back to you promptly.
-                </p>
+                </motion.p>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="firstName">First Name</Label>
+                    {
+                      inputs.map(({text, label, type, value}, i) => (
+                        <div key={i} className="space-y-2">
+                      <Label htmlFor={label}>{text}</Label>
                       <Input
-                        id="firstName"
-                        name="firstName"
+                        variants={button}
+                        initial="initial"
+                        whileInView="inView"
+                        viewport={viewport}
+                        id={label}
+                        name={label}
+                        type={type}
                         placeholder=""
-                        value={formData.firstName}
+                        value={value}
                         onChange={handleChange}
                         required
                       />
                     </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="lastName">Last Name</Label>
-                      <Input
-                        id="lastName"
-                        name="lastName"
-                        placeholder=""
-                        value={formData.lastName}
-                        onChange={handleChange}
-                        required
-                      />
+                      ))
+                    }
                     </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="company">Company</Label>
-                    <Input
-                      id="company"
-                      name="company"
-                      placeholder=""
-                      value={formData.company}
-                      onChange={handleChange}
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Work Email</Label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      placeholder=""
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Phone Number</Label>
-                    <Input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      placeholder=""
-                      value={formData.phone}
-                      onChange={handleChange}
-                    />
-                  </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="message">Message</Label>
                     <Textarea
+                      variants={button}
+                      initial="initial"
+                      whileInView="inView"
+                      viewport={viewport}
                       id="message"
                       name="message"
                       placeholder="Tell us about your project or inquiry..."
@@ -147,9 +125,9 @@ company: ${company}
                     />
                   </div>
 
-                  <Button type="submit" className="w-auto">
+                  <MotionButton variants={button} initial="initial" whileInView="inView" viewport={viewport} type="submit" className="w-auto">
                     Send Message
-                  </Button>
+                  </MotionButton>
                 </form>
               </div>
 
@@ -157,14 +135,14 @@ company: ${company}
               <div className="space-y-6">
                 {/* Office Info Card */}
                 <div className="bg-background border border-border rounded-lg p-8">
-                  <h2 className="font-heading text-2xl font-bold text-destructive mb-2">
+                  <motion.h2 variants={heading} initial="initial" whileInView="inView" viewport={viewport} className="font-heading text-2xl font-bold text-destructive mb-2">
                     Our Office
-                  </h2>
-                  <p className="text-muted-foreground mb-6">
+                  </motion.h2>
+                  <motion.p variants={subText} initial="initial" whileInView="inView" viewport={viewport}  className="text-muted-foreground mb-6">
                     Find us or reach out through our direct contact information. We're here to help.
-                  </p>
+                  </motion.p>
 
-                  <div className="space-y-4">
+                  <motion.div variants={button} initial="initial" whileInView="inView" viewport={viewport} className="space-y-4">
                     <div className="flex items-start gap-3">
                       <MapPin className="w-5 h-5 text-destructive mt-0.5 flex-shrink-0" />
                       <div>
@@ -190,9 +168,9 @@ company: ${company}
                         <p className="text-muted-foreground text-sm">info@knl.com</p>
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
 
-                  <div className="mt-6">
+                  <motion.div variants={button} initial="initial" whileInView="inView" viewport={viewport} className="mt-6">
                     <h3 className="font-semibold text-foreground mb-3">Connect With Us</h3>
                     <div className="flex gap-4">
                       <a href="#" className="text-destructive hover:text-primary transition-colors" aria-label="Facebook">
@@ -208,7 +186,7 @@ company: ${company}
                         <Instagram className="w-5 h-5" />
                       </a>
                     </div>
-                  </div>
+                  </motion.div>
                 </div>
 
                 {/* Map Placeholder */}
