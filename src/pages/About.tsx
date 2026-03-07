@@ -5,7 +5,7 @@ import { GoDiamond } from "react-icons/go";
 import { PiHandshake } from "react-icons/pi";
 import { FiUsers } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import heroImage from "../assets/about-hero.jpg";
+import heroImage from "../assets/heroImg.jpg";
 import cceccLogo from "../assets/ccecc.png";
 import telisolLogo from "../assets/telisolLogo.png";
 import bdLogo from "../assets/bdLogo.png";
@@ -168,7 +168,7 @@ const About = () => {
       </section>
 
       {/* Leadership Section */}
-      <section className="py-16 md:py-20 px-4">
+      {/* <section className="py-16 md:py-20 px-4">
         <div className="container mx-auto max-w-5xl">
           <motion.h2 variants={heading} initial="initial" whileInView="inView" viewport={viewport} className="font-heading text-2xl md:text-3xl font-bold text-destructive text-center mb-12">
             Meet Our Leadership
@@ -193,7 +193,7 @@ const About = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Certifications Section */}
       <section className="py-12 px-4 bg-foreground/10">

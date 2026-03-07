@@ -157,7 +157,7 @@ company: ${company}
                       <Phone className="w-5 h-5 text-destructive mt-0.5 flex-shrink-0" />
                       <div>
                         <h3 className="font-semibold text-foreground">Phone</h3>
-                        <p className="text-muted-foreground text-sm">+1 (555) 123-4567</p>
+                        <p className="text-muted-foreground text-sm">+2348124960354</p>
                       </div>
                     </div>
 
@@ -165,7 +165,7 @@ company: ${company}
                       <Mail className="w-5 h-5 text-destructive mt-0.5 flex-shrink-0" />
                       <div>
                         <h3 className="font-semibold text-foreground">Email</h3>
-                        <p className="text-muted-foreground text-sm">info@knl.com</p>
+                        <p className="text-muted-foreground text-sm">knlnigeria@gmail.com</p>
                       </div>
                     </div>
                   </motion.div>
@@ -173,17 +173,12 @@ company: ${company}
                   <motion.div variants={button} initial="initial" whileInView="inView" viewport={viewport} className="mt-6">
                     <h3 className="font-semibold text-foreground mb-3">Connect With Us</h3>
                     <div className="flex gap-4">
-                      <a href="#" className="text-destructive hover:text-primary transition-colors" aria-label="Facebook">
-                        <Facebook className="w-5 h-5" />
+                      <a href="https://web.facebook.com/profile.php?id=61555772919708" target="_blank" className="text-destructive hover:text-primary transition-colors" aria-label="Facebook">
+                        <Facebook className="w-8 h-8" />
                       </a>
-                      <a href="#" className="text-destructive hover:text-primary transition-colors" aria-label="Twitter">
-                        <Twitter className="w-5 h-5" />
-                      </a>
-                      <a href="#" className="text-destructive hover:text-primary transition-colors" aria-label="LinkedIn">
-                        <Linkedin className="w-5 h-5" />
-                      </a>
-                      <a href="#" className="text-destructive hover:text-primary transition-colors" aria-label="Instagram">
-                        <Instagram className="w-5 h-5" />
+                      
+                      <a href="https://www.instagram.com/knl_nigeria/" target="_blank" className="text-destructive hover:text-primary transition-colors" aria-label="Instagram">
+                        <Instagram className="w-8 h-8" />
                       </a>
                     </div>
                   </motion.div>
