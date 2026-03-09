@@ -10,7 +10,7 @@ import cceccLogo from "../assets/ccecc.png";
 import telisolLogo from "../assets/telisolLogo.png";
 import bdLogo from "../assets/bdLogo.png";
 import { motion } from "framer-motion"
-import { card, roundedImage, heading, hero, subText, cardImage, button, viewport } from "../animation/animation";
+import { card, heading, hero, subText, cardImage, button, viewport } from "../animation/animation";
 
 
 const coreValues = [
@@ -47,29 +47,6 @@ const milestones = [
   {
     year: "2025",
     description: "Celebrated 15 years of industry leadership and innovation."
-  }
-];
-
-const leadership = [
-  {
-    name: "Johnathan Steel",
-    title: "CEO & Founder",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face"
-  },
-  {
-    name: "Sarah Mill",
-    title: "Chief Operating Officer",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face"
-  },
-  {
-    name: "Michael Forge",
-    title: "Head of Sales",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face"
-  },
-  {
-    name: "Emily Beam",
-    title: "Chief Financial Officer",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face"
   }
 ];
 
