@@ -6,14 +6,14 @@ export const hero: Variants = {
     animate_h: {
         opacity: 1,
         transition: {
-            duration: .75
+            duration: .25
         }
     },
     animate_p: {
         opacity: 1,
         transition: {
-            delay: .5, 
-            duration: .75
+            delay: .25, 
+            duration: .25
         }
     }
 
@@ -33,7 +33,7 @@ export const heroButton: Variants = {
         opacity: 1,
         transition: {
             delay: .5,
-            duration: .75,
+            duration: .25,
             type: "spring",
             stiffness: 100
         }
@@ -50,7 +50,7 @@ export const heading: Variants = {
         y: 0, 
         opacity: 1,
         transition: {
-            duration: 0.75
+            duration: 0.25
         }
     }
 
@@ -65,8 +65,8 @@ export const subText: Variants = {
         y: 0,
         opacity: 1,
         transition: {
-            delay: 0.3,
-            duration: 0.75
+            delay: 0.1,
+            duration: 0.25
         }
     }
 }
@@ -83,8 +83,7 @@ export const card: Variants = {
             type: "spring",
             stiffness: 100,
             damping: 15, 
-            delay: 0.5,
-            duration: 0.75
+            duration: 0.25
         }
     }
 }
@@ -99,7 +98,7 @@ export const cardImage: Variants = {
     opacity: 1,
     scaleX: 1,
     transition: {
-      duration: 0.75
+      duration: 0.25
     } 
   },
 }
@@ -114,7 +113,7 @@ export const roundedImage: Variants = {
     opacity: 1,
     scale: 1,
     transition: {
-      duration: 0.75
+      duration: 0.25
     } 
   },
 }
@@ -130,8 +129,7 @@ export const button: Variants = {
         opacity: 1,
         scaleX: 1,
         transition: {
-            delay: 0.5,
-            duration: 0.75,
+            duration: 0.25,
         }
 
     }
@@ -147,8 +145,8 @@ export const sidebar: Variants = {
         opacity: 1, 
         scaleY: 1,
         transition: {
-            delay: 0.3,
-            duration: 0.75
+            delay: 0.1,
+            duration: 0.25
         }
     } 
 }
