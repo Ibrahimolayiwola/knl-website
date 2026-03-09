@@ -1,5 +1,5 @@
 import { MotionButton } from "./ui/button";
-import heroImage from "../assets/heroImg.jpg";
+import heroImage from "../assets/heroImage.webp";
 import { Link } from "react-router-dom";
 import {motion} from "framer-motion";
 import {hero, heroButton, viewport} from "../animation/animation.tsx"

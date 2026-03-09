@@ -6,15 +6,14 @@ export const hero: Variants = {
     animate_h: {
         opacity: 1,
         transition: {
-            delay: 1,
-            duration: 1.5
+            duration: .75
         }
     },
     animate_p: {
         opacity: 1,
         transition: {
-            delay: 1.5, 
-            duration: 1.5
+            delay: .5, 
+            duration: .75
         }
     }
 
@@ -33,8 +32,8 @@ export const heroButton: Variants = {
         x: 0,
         opacity: 1,
         transition: {
-            delay: 2,
-            duration: 1.5,
+            delay: .5,
+            duration: .75,
             type: "spring",
             stiffness: 100
         }
