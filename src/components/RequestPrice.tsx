@@ -59,14 +59,14 @@ Delivery date: ${deliveryDate}
 `
 
 
-                const whatsappLink = `https://wa.me/2348183674112?text=${encodeURIComponent(message)}`;
+                const whatsappLink = `https://wa.me/2348124960354?text=${encodeURIComponent(message)}`;
                 window.open(whatsappLink, "_blank");
             })
             .catch((err) => console.error(err));
     };
 
     return (
-        <div className="fixed inset-0  bg-black/50  top-0 z-20 flex justify-center items-center min-h-screen ">
+        <div className="fixed overflow-y-auto inset-0  bg-black/50  top-0 z-20 flex justify-center items-center min-h-screen ">
             <form onSubmit={handleSubmit} className="w-[500px] md:w-[650px] lg:w-[800px] p-8 bg-white rounded-lg shadow-md space-y-4 overflow-y-scroll">
                 <h2 className="text-center text-destructive font-semibold">Request Price</h2>
                 <div className="">
