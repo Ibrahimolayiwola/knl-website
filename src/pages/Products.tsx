@@ -110,7 +110,7 @@ const Products = () => {
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
 
-      <main className="flex-1">
+      <main className="flex-1 pt-8">
         <div className="container-narrow mx-auto section-padding">
           <div className="lg:hidden">
              <motion.h2 variants={heading} initial="initial" whileInView="inView" viewport={viewport} className="font-heading text-2xl md:text-3xl font-bold text-destructive text-center mb-12">

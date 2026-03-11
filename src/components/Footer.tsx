@@ -2,8 +2,6 @@ import { IoMailOutline } from "react-icons/io5";
 import { MdLocalPhone } from "react-icons/md";
 import { FiMapPin } from "react-icons/fi";
 import { FiFacebook } from "react-icons/fi";
-import { FaXTwitter } from "react-icons/fa6";
-import { FiLinkedin } from "react-icons/fi";
 import { FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Logo from "../assets/knl-logo-2.png";
@@ -92,16 +90,11 @@ const Footer = () => {
                 {/* Social Links */}
                 <div className="border-t border-primary-foreground/10 mt-8 pt-8 flex justify-center gap-4">
                     <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors" aria-label="Facebook">
-                        <FiFacebook className="w-5 h-5" />
+                        <FiFacebook className="w-8 h-8" />
                     </a>
-                    <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors" aria-label="Twitter">
-                        <FaXTwitter className="w-5 h-5" />
-                    </a>
-                    <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors" aria-label="LinkedIn">
-                        <FiLinkedin className="w-5 h-5" />
-                    </a>
+                    
                     <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors" aria-label="Instagram">
-                        <FaInstagram className="w-5 h-5" />
+                        <FaInstagram className="w-8 h-8" />
                     </a>
                 </div>
             </div>
