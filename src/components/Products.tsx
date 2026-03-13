@@ -1,11 +1,11 @@
 import { FiArrowRight } from "react-icons/fi";
 import { Button } from "./ui/button";
-import SteelProduct1 from "../assets/product1.jpg"
-import SteelProduct2 from "../assets/product2.jpg"
-import SteelProduct3 from "../assets/product3.jpg"
-import SteelProduct4 from "../assets/product4.jpg"
-import SteelProduct5 from "../assets/product5.jpg"
-import SteelProduct6 from "../assets/product6.jpg"
+import SteelProduct1 from "../assets/product1.webp"
+import SteelProduct2 from "../assets/product2.webp"
+import SteelProduct3 from "../assets/product3.webp"
+import SteelProduct4 from "../assets/product4.webp"
+import SteelProduct5 from "../assets/product5.webp"
+import SteelProduct6 from "../assets/product6.webp"
 import { useStateContext } from "../context/StateContext";
 import {motion} from "framer-motion"
 import {cardImage, heading, subText, viewport} from "../animation/animation"

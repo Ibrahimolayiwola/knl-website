@@ -6,12 +6,12 @@ import { Input } from "../components/ui/input";
 import { Button, MotionButton } from "../components/ui/button";
 import { Checkbox } from "../components/ui/checkbox";
 
-import productRebar from "../assets/product1.jpg";
-import productPipes from "../assets/product2.jpg";
-import productBeams from "../assets/product3.jpg";
-import productSheets from "../assets/product4.jpg";
-import productWire from "../assets/product5.jpg";
-import productCoils from "../assets/product5.jpg";
+import productRebar from "../assets/product1.webp";
+import productPipes from "../assets/product2.webp";
+import productBeams from "../assets/product3.webp";
+import productSheets from "../assets/product4.webp";
+import productWire from "../assets/product5.webp";
+import productCoils from "../assets/product6.webp";
 import RequestPrice from "../components/RequestPrice";
 import { useStateContext } from "../context/StateContext";
 import { motion } from "framer-motion"

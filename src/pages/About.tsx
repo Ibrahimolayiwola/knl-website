@@ -5,7 +5,7 @@ import { GoDiamond } from "react-icons/go";
 import { PiHandshake } from "react-icons/pi";
 import { FiUsers } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import heroImage from "../assets/heroImg.jpg";
+import heroImage from "../assets/heroImage.webp";
 import cceccLogo from "../assets/ccecc.png";
 import telisolLogo from "../assets/telisolLogo.png";
 import bdLogo from "../assets/bdLogo.png";
