@@ -4,84 +4,78 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Input } from "../components/ui/input";
 import { Button, MotionButton } from "../components/ui/button";
-import { Checkbox } from "../components/ui/checkbox";
-
-import productRebar from "../assets/product1.webp";
-import productPipes from "../assets/product2.webp";
-import productBeams from "../assets/product3.webp";
-import productSheets from "../assets/product4.webp";
-import productWire from "../assets/product5.webp";
-import productCoils from "../assets/product6.webp";
 import RequestPrice from "../components/RequestPrice";
 import { useStateContext } from "../context/StateContext";
 import { motion } from "framer-motion"
-import { button, cardImage, heading, sidebar, subText, viewport } from "../animation/animation"
+import { button, cardImage, heading, subText, viewport } from "../animation/animation"
 
-const sizes = [
-  "16mm",
-  "12mm",
-  "10mm",
-  "20mm",
-  "8mm",
-  "25mm",
-];
 
-const materialTypes = [
-  { id: "eagle", label: "Eagle Steel" },
-  { id: "tiger", label: "Tiger Steel" },
-  { id: "lion", label: "Lion Steel" },
-  { id: "stm", label: "STM Steel" },
-  { id: "rs", label: "RS Steel" },
-  { id: "tmt", label: "TMT Steel" },
-  { id: "fed", label: "Fed Steel" },
-];
 
 const products = [
   {
     id: 1,
-    image: productRebar,
+    image: "https://res.cloudinary.com/dejzdypyf/image/upload/v1773524440/product1_vddeqx.webp",
     name: "LCI Steel Bar",
     tags: ["20mm"],
   },
+   {
+      id: 2,
+      image: "https://res.cloudinary.com/dejzdypyf/image/upload/v1773524440/marine-board1_mfscp2.avif",
+      name: "Marine Board",
+      tags: [""]
+    },
   {
-    id: 2,
-    image: productSheets,
+    id: 3,
+    image: "https://res.cloudinary.com/dejzdypyf/image/upload/v1773524442/product2_qeei1w.webp",
     name: "Lion Steel Bar",
     tags: ["16mm"],
   },
   {
-    id: 3,
-    image: productBeams,
+    id: 4,
+    image: "https://res.cloudinary.com/dejzdypyf/image/upload/v1773524442/product2_qeei1w.webp",
     name: "TMT Steel Bar",
     tags: ["8mm"],
   },
   {
-    id: 4,
-    image: productPipes,
+    id: 5,
+    image: "https://res.cloudinary.com/dejzdypyf/image/upload/v1773524443/product5_x54mtg.avif",
     name: "RS local Steel Bar",
     tags: ["12mm"],
   },
+   {
+      id: 6,
+      image: "https://res.cloudinary.com/dejzdypyf/image/upload/v1773524441/marine-board4_cm7nit.avif",
+      name: "Marine Board",
+      tags: [""]
+    },
   {
-    id: 5,
-    image: productWire,
+    id: 7,
+    image: "https://res.cloudinary.com/dejzdypyf/image/upload/v1773524445/product7_zi5psa.avif",
     name: "STM Local Steel Bar",
     tags: ["10mm"],
   },
+
   {
-    id: 6,
-    image: productCoils,
+    id: 8,
+    image: "https://res.cloudinary.com/dejzdypyf/image/upload/v1773524444/product6_zrovny.avif",
     name: "Eagle Steel Bar",
     tags: ["16mm"],
   },
   {
-    id: 7,
-    image: productSheets,
+    id: 9,
+    image: "https://res.cloudinary.com/dejzdypyf/image/upload/v1773524445/product9_ukkoen.avif",
     name: "TMT Steel Bar",
     tags: ["10mm"],
   },
+   {
+      id: 10,
+      image: "https://res.cloudinary.com/dejzdypyf/image/upload/v1773524442/marine-board3_q2ji5e.avif",
+      name: "Marine Board",
+      tags: [""]
+    },
   {
-    id: 8,
-    image: productCoils,
+    id: 11,
+    image: "https://res.cloudinary.com/dejzdypyf/image/upload/v1773524447/product10_oogak6.avif",
     name: "Tiger Steel Bar",
     tags: ["16mm"],
   },
@@ -91,18 +85,7 @@ const products = [
 
 const Products = () => {
   const { onRequestPrice, selectedProduct } = useStateContext()
-  const [selectedSize, setSelectedSize] = useState<string | null>(null);
-  const [selectedMaterials, setSelectedMaterials] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
-
-  const handleMaterialChange = (materialId: string, checked: boolean) => {
-    if (checked) {
-      setSelectedMaterials([...selectedMaterials, materialId]);
-    } else {
-      setSelectedMaterials(selectedMaterials.filter((m) => m !== materialId));
-    }
-  };
-
 
 
 
@@ -117,53 +100,14 @@ const Products = () => {
                 Our Products
               </motion.h2>
               <motion.p variants={subText} initial="initial" whileInView="inView" viewport={viewport} className="text-foreground mb-6 leading-relaxed">
-                Explore our extensive range of high-quality steel products, engineered to meet the
+                Explore our extensive range of high-quality construction materials, engineered to meet the
                 demands of diverse industrial and construction projects. From raw materials to custom
                 fabrications, we deliver reliability and performance.
               </motion.p>
           </div>
           <div className="flex flex-col lg:flex-row gap-8 pt-8">
-            {/* Sidebar */}
-            <motion.aside variants={sidebar} initial="initial" whileInView="inView" viewport={viewport} className="w-full lg:w-64 shrink-0">
-              <div className="bg-card border border-border rounded-lg p-6">
-                {/* Categories */}
-                <nav className="space-y-1 mb-8">
-                  {sizes.map((size) => (
-                    <button
-                      key={size}
-                      onClick={() => setSelectedSize(selectedSize === size ? null : size)}
-                      className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${selectedSize === size
-                        ? "bg-primary/10 text-primary font-medium"
-                        : "text-foreground hover:bg-muted"
-                        }`}
-                    >
-                      {size}
-                    </button>
-                  ))}
-                </nav>
-
-                {/* Material Types */}
-                <div className="space-y-3">
-                  {materialTypes.map((material) => (
-                    <div key={material.id} className="flex items-center space-x-2">
-                      <Checkbox
-                        id={material.id}
-                        checked={selectedMaterials.includes(material.id)}
-                        onCheckedChange={(checked: boolean) =>
-                          handleMaterialChange(material.id, checked as boolean)
-                        }
-                      />
-                      <label
-                        htmlFor={material.id}
-                        className="text-sm text-muted-foreground cursor-pointer"
-                      >
-                        {material.label}
-                      </label>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </motion.aside>
+        
+            
 
             {/* Main Content */}
             <div className="flex-1">

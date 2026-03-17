@@ -1,45 +1,55 @@
 import { FiArrowRight } from "react-icons/fi";
 import { Button } from "./ui/button";
-import SteelProduct1 from "../assets/product1.webp"
-import SteelProduct2 from "../assets/product2.webp"
-import SteelProduct3 from "../assets/product3.webp"
-import SteelProduct4 from "../assets/product4.webp"
-import SteelProduct5 from "../assets/product5.webp"
-import SteelProduct6 from "../assets/product6.webp"
 import { useStateContext } from "../context/StateContext";
 import {motion} from "framer-motion"
 import {cardImage, heading, subText, viewport} from "../animation/animation"
 
 const products = [
   {
-    image: SteelProduct1,
+    image: "https://res.cloudinary.com/dejzdypyf/image/upload/v1773524440/product1_vddeqx.webp",
     name: "LCI Steel bar",
     thickness: ["12mm", "14mm", "16mm"]
   },
   {
-    image: SteelProduct2,
+    image: "https://res.cloudinary.com/dejzdypyf/image/upload/v1773524442/product2_qeei1w.webp",
     name: "Eagle Steel bar",
     thickness: ["14mm", "16mm", "20mm"]
   },
   {
-    image: SteelProduct3,
+    image: "https://res.cloudinary.com/dejzdypyf/image/upload/v1773524440/marine-board1_mfscp2.avif",
+    name: "Marine Board",
+    thickness: [""]
+  },
+ 
+  {
+    image: "https://res.cloudinary.com/dejzdypyf/image/upload/v1773524445/product3_ggejpc.webp",
     name: "Lion Steel Bar",
     thickness: ["8mm", "20mm", "14mm"]
   },
+   {
+    image: "https://res.cloudinary.com/dejzdypyf/image/upload/v1773524442/product2_qeei1w.webp",
+    name: "Marine Board",
+    thickness: [""]
+  },
   {
-    image: SteelProduct4,
+    image: "https://res.cloudinary.com/dejzdypyf/image/upload/v1773524441/marine-board4_cm7nit.avif",
     name: "Fed Steel bar",
     thickness: ["14mm", "8mm", "10mm"]
   },
   {
-    image: SteelProduct5,
+    image: "https://res.cloudinary.com/dejzdypyf/image/upload/v1773524443/product5_x54mtg.avif",
     name: "TMT Steel bar",
     thickness: ["16mm", "20mm"]
   },
   {
-    image: SteelProduct6,
+    image: "https://res.cloudinary.com/dejzdypyf/image/upload/v1773524447/product10_oogak6.avif",
     name: "Tiger Steel bar",
     thickness: ["14mm", "12mm", "10mm"]
+  },
+   {
+    image: "https://res.cloudinary.com/dejzdypyf/image/upload/v1773524442/marine-board2_napbro.avif",
+    name: "Marine Board",
+    thickness: [""]
   },
 ];
 
@@ -55,17 +65,17 @@ const Products = () => {
       <div className="container-narrow mx-auto">
         <div className="text-center mb-12">
           <motion.h2 variants={heading} initial="initial" whileInView="inView" viewport={viewport} className="font-heading text-2xl md:text-3xl font-semibold text-destructive mb-3">
-            Our Premium Steel Products
+            Our Premium Products
           </motion.h2>
           <motion.p variants={subText} initial="initial" whileInView="inView" viewport={viewport} className="text-muted-foreground text-sm md:text-base max-w-lg mx-auto">
-            Explore our diverse range of steel products, engineered for strength, durability, and reliability.
+            Explore our diverse range of products, engineered for strength, durability, and reliability.
           </motion.p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {products.map(({ image, name, thickness }) => (
+          {products.map(({ image, name, thickness }, index) => (
             <div
-              key={name}
+              key={index}
               className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-card-hover transition-shadow duration-300"
             >
               <div className="aspect-[4/3] overflow-hidden">

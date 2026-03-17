@@ -81,7 +81,7 @@ company: ${company}
                   Get in Touch
                 </motion.h1>
                 <motion.p variants={subText} initial="initial" whileInView="inView" viewport={viewport} className="text-muted-foreground mb-8">
-                  Have questions about our steel products or services? Fill out the form below, and our team will get back to you promptly.
+                  Have questions about our products or services? Fill out the form below, and our team will get back to you promptly.
                 </motion.p>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -148,7 +148,7 @@ company: ${company}
                       <div>
                         <h3 className="font-semibold text-foreground">Address</h3>
                         <p className="text-muted-foreground text-sm">
-                          155 Lagos-Badagry express way, Lagos, Nigeria
+                          2, Olorunshogo str, Iron MKT, Orile Iganmu, Lagos
                         </p>
                       </div>
                     </div>

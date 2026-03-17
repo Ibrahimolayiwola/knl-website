@@ -5,7 +5,6 @@ import { GoDiamond } from "react-icons/go";
 import { PiHandshake } from "react-icons/pi";
 import { FiUsers } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import heroImage from "../assets/heroImage.webp";
 import cceccLogo from "../assets/ccecc.png";
 import telisolLogo from "../assets/telisolLogo.png";
 import bdLogo from "../assets/bdLogo.png";
@@ -76,15 +75,15 @@ const About = () => {
       <section className="relative min-h-[500px] md:min-h-[600px]  flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
+          style={{ backgroundImage: `url("https://res.cloudinary.com/dejzdypyf/image/upload/v1773646296/heroImage_qqun0m.webp")` }}
         />
         <div className="absolute inset-0 bg-foreground/70" />
         <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
           <motion.h1 variants={hero} initial="initial" animate="animate_h" viewport={viewport} className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-            Forging the Future of Steel Distribution
+            Dedicated to Supporting Every Building Project
           </motion.h1>
           <motion.p variants={hero} initial="initial" animate="animate_p" viewport={viewport} className="text-white/80 text-sm md:text-base max-w-xl mx-auto">
-            Delivering precision-engineered steel solutions with unmatched reliability and a commitment to innovation.
+            We specialize in the supply of reliable building materials, helping contractors and individuals access quality steel, cement, marine boards, and other construction essentials.
           </motion.p>
         </div>
       </section>
@@ -230,7 +229,7 @@ const About = () => {
       <section className="py-16 md:py-20 px-4">
         <div className="container mx-auto max-w-3xl text-center">
           <motion.h2 variants={heading} initial="initial" whileInView="inView" viewport={viewport} className="font-heading text-2xl md:text-3xl font-bold text-destructive mb-4">
-            Get the Right Steel for Your Project—On Time and On Spec.
+            Get the Right Materials for Your Project—On Time and On Spec.
           </motion.h2>
           <motion.p variants={subText} initial="initial" whileInView="inView" viewport={viewport} className="text-muted-foreground text-sm mb-8 max-w-xl mx-auto">
             Contact us today to discuss your project requirements and discover how KNL can support your success.

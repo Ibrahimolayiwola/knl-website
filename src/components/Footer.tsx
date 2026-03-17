@@ -81,7 +81,7 @@ const Footer = () => {
                             </li>
                             <li className="flex items-start gap-2 text-primary-foreground/70 text-sm">
                                 <FiMapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                                155 Lagos-Badagry express way, Lagos, Nigeria
+                                2, Olorunshogo str, Iron MKT, Orile Iganmu, Lagos
                             </li>
                         </ul>
                     </div>

@@ -12,7 +12,7 @@ const CallToAction = () => {
          Let's build something that last
         </motion.h2>
         <motion.p variants={subText} initial="initial" whileInView="inView" className="text-muted-foreground text-sm md:text-base max-w-lg mx-auto mb-8">
-         Choose KNL for a reliable steel supply, proven quality, and responsive support.
+         Choose KNL for a reliable construction materials with proven quality and responsive support.
         </motion.p>
         <MotionButton variants={button} initial="initial" whileInView="inView" className="bg-primary hover:bg-accent text-primary-foreground">
           Start Your Project Today
