@@ -18,7 +18,7 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 container-narrow mx-auto px-4 md:px-8 lg:px-16 text-center">
-        <motion.h1 variants={hero} initial="initial" animate="animate_h" viewport={viewport} className="font-heading text-3xl md:text-4xl lg:text-5xl font-semibold text-primary-foreground mb-4 max-w-2xl mx-auto leading-auto animate-fade-in">
+        <motion.h1 variants={hero} initial="initial" animate="animate_h" viewport={viewport} className="font-heading text-2xl md:text-4xl lg:text-5xl font-semibold text-primary-foreground mb-4 max-w-2xl mx-auto leading-auto animate-fade-in">
           Your Trusted Source For Quality Construction Materials
         </motion.h1>
         <motion.p variants={hero} initial="initial" animate="animate_p" viewport={viewport} className="text-primary-foreground/80 text-sm md:text-base max-w-xl mx-auto mb-8 mt-4 animate-fade-in" >

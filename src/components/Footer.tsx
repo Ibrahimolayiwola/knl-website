@@ -89,11 +89,11 @@ const Footer = () => {
 
                 {/* Social Links */}
                 <div className="border-t border-primary-foreground/10 mt-8 pt-8 flex justify-center gap-4">
-                    <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors" aria-label="Facebook">
+                    <a href="https://web.facebook.com/profile.php?id=61555772919708" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors" aria-label="Facebook">
                         <FiFacebook className="w-8 h-8" />
                     </a>
                     
-                    <a href="#" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors" aria-label="Instagram">
+                    <a href="https://www.instagram.com/knl_nigeria/" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors" aria-label="Instagram">
                         <FaInstagram className="w-8 h-8" />
                     </a>
                 </div>

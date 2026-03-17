@@ -13,7 +13,7 @@ const Home = () => {
     return (
         <>
             <Header />
-            <main>
+            <>
                 <Hero />
                 <Features />
                 <Products />
@@ -23,7 +23,7 @@ const Home = () => {
                         <RequestPrice />
                     )
                 }
-            </main>
+            </>
             <Footer />
         </>
     )

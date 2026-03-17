@@ -20,31 +20,15 @@ const products = [
     name: "Marine Board",
     thickness: [""]
   },
- 
-  {
-    image: "https://res.cloudinary.com/dejzdypyf/image/upload/v1773524445/product3_ggejpc.webp",
-    name: "Lion Steel Bar",
-    thickness: ["8mm", "20mm", "14mm"]
-  },
    {
     image: "https://res.cloudinary.com/dejzdypyf/image/upload/v1773524442/product2_qeei1w.webp",
     name: "Marine Board",
     thickness: [""]
   },
   {
-    image: "https://res.cloudinary.com/dejzdypyf/image/upload/v1773524441/marine-board4_cm7nit.avif",
-    name: "Fed Steel bar",
-    thickness: ["14mm", "8mm", "10mm"]
-  },
-  {
     image: "https://res.cloudinary.com/dejzdypyf/image/upload/v1773524443/product5_x54mtg.avif",
     name: "TMT Steel bar",
     thickness: ["16mm", "20mm"]
-  },
-  {
-    image: "https://res.cloudinary.com/dejzdypyf/image/upload/v1773524447/product10_oogak6.avif",
-    name: "Tiger Steel bar",
-    thickness: ["14mm", "12mm", "10mm"]
   },
    {
     image: "https://res.cloudinary.com/dejzdypyf/image/upload/v1773524442/marine-board2_napbro.avif",

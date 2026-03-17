@@ -7,7 +7,6 @@ import { FiUsers } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import cceccLogo from "../assets/ccecc.png";
 import telisolLogo from "../assets/telisolLogo.png";
-import bdLogo from "../assets/bdLogo.png";
 import { motion } from "framer-motion"
 import { card, heading, hero, subText, cardImage, button, viewport } from "../animation/animation";
 
@@ -63,7 +62,7 @@ const testimonials = [
 ];
 
 const partnerLogos = [
-  cceccLogo, telisolLogo, bdLogo,
+  cceccLogo, telisolLogo, "https://res.cloudinary.com/dejzdypyf/image/upload/v1773707362/BDEL-1_wfuefk.png",
 ]
 
 const About = () => {
@@ -79,7 +78,7 @@ const About = () => {
         />
         <div className="absolute inset-0 bg-foreground/70" />
         <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
-          <motion.h1 variants={hero} initial="initial" animate="animate_h" viewport={viewport} className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+          <motion.h1 variants={hero} initial="initial" animate="animate_h" viewport={viewport} className="font-heading text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             Dedicated to Supporting Every Building Project
           </motion.h1>
           <motion.p variants={hero} initial="initial" animate="animate_p" viewport={viewport} className="text-white/80 text-sm md:text-base max-w-xl mx-auto">
@@ -175,12 +174,12 @@ const About = () => {
       <section className="py-12 px-4 bg-foreground/10">
         <div className="container mx-auto max-w-4xl text-center">
           <motion.h2 variants={heading} initial="initial" whileInView="inView" viewport={viewport} className="font-heading text-2xl md:text-3xl font-bold text-destructive mb-10">
-            Certifications & Partners
+             Partners
           </motion.h2>
           <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10">
             {
               partnerLogos.map((logo, i) => (
-                <motion.div variants={cardImage} initial="initial" whileInView="inView" viewport={viewport} key={i} className="w-26  md:w-32 md:h-20 bg-white shadow-lg rounded-lg flex items-center justify-center">
+                <motion.div variants={cardImage} initial="initial" whileInView="inView" viewport={viewport} key={i} className="w-26  md:w-32 md:h-20   rounded-lg flex items-center justify-center">
                   <img src={logo} alt="partner logo" className="w-full object-contain" />
                 </motion.div>
               ))
